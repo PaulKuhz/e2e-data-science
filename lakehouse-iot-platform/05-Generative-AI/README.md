@@ -39,15 +39,36 @@ Dieses Modul wurde komplett überarbeitet, um eine **gamifizierte, challenge-bas
 
 ## 🎯 Quick Start
 
-```python
-# 1. Setup
-%run ../_resources/00-setup
+### ⚠️ **WICHTIG: Erst Data Pipeline starten!**
 
-# 2. Check Progress
+Bevor du mit GenAI loslegst, **musst du die Daten laden**:
+
+```python
+# 1. Setup Catalog & Schema
+%run ../config
+
+# 2. Initialize Environment  
+%run ../_resources/00-setup $reset_all_data=false
+
+# 3. 🚨 CRITICAL: Run Data Ingestion Pipeline
+# Open and run: 01-Data-ingestion/01.1-SDP-Wind-Turbine-SQL.ipynb
+# This creates all turbine tables (turbine_status, sensor_readings, etc.)
+# Without this, GenAI tools have NO DATA to query!
+```
+
+**Test ob Daten geladen sind:**
+```sql
+SELECT * FROM turbine_status LIMIT 10
+```
+
+### 🚀 Dann starte mit GenAI:
+
+```python
+# Check Progress
 from _resources.gamification_framework import check_progress
 check_progress()
 
-# 3. Start Learning!
+# Start Learning!
 # Open 05.1.1-prompt-engineering-basics.ipynb
 ```
 

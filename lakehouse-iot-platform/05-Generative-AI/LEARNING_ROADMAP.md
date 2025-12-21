@@ -6,6 +6,25 @@ Welcome to the **interactive GenAI learning experience**! This guide shows you t
 
 ---
 
+## ⚠️ **PREREQUISITES - Start Here!** ⚠️
+
+### **Phase 0: Setup & Data Preparation** 🏗️
+**Required before starting GenAI modules!**  
+**Time:** 15-20 minutes
+
+#### You MUST run these first:
+
+1. **`config.ipynb`** - Configure your catalog and schema
+2. **`_resources/00-setup.ipynb`** - Initialize environment
+3. **`01-Data-ingestion/01.1-SDP-Wind-Turbine-SQL.ipynb`** - **CRITICAL!**
+   - Creates turbine database tables
+   - Loads sensor data and maintenance history
+   - Without this, GenAI tools will have no data to query! ❌
+
+**Checkpoint:** Run `SELECT * FROM turbine_status LIMIT 10` - if this works, you're ready! ✅
+
+---
+
 ## 🗺️ Learning Roadmap
 
 ### **Phase 1: Foundation (Beginner)** 🟢
