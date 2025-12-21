@@ -58,10 +58,13 @@ Progress through 5 levels as you learn:
 
 ## 🚀 **Getting Started - Your First Steps**
 
-### 📖 **Complete Setup Guide**
-👉 **[READ THE FULL SETUP GUIDE](SETUP_GUIDE.md)** 👈
+### 📖 **Interactive Setup in Databricks**
+👉 **In Databricks: Open `lakehouse-iot-platform/00-SETUP-START-HERE.ipynb`** 👈
 
-For detailed step-by-step instructions with screenshots and troubleshooting, see the complete setup guide above.
+This interactive notebook guides you through the complete setup with runnable cells!
+
+### 📄 **Detailed Setup Guide**
+For reading on GitHub: **[SETUP_GUIDE.md](SETUP_GUIDE.md)**
 
 ### **Quick Start Summary:**
 
