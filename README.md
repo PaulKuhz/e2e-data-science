@@ -58,30 +58,38 @@ Progress through 5 levels as you learn:
 
 ## 🚀 **Getting Started - Your First Steps**
 
-### **Step 1: Clone Repository to Databricks** 📦
-1. Open Databricks Free Edition
-2. Go to **Workspace** → **Repos** → **Add Repo**
-3. Enter: `https://github.com/PaulKuhz/e2e-data-science` (or Berkeley-Data if using original)
-4. Click **Create Repo**
+### 📖 **Complete Setup Guide**
+👉 **[READ THE FULL SETUP GUIDE](SETUP_GUIDE.md)** 👈
 
-### **Step 2: Configure Your Environment** ⚙️
-1. Open `lakehouse-iot-platform/config.ipynb`
-2. Set your catalog name (e.g., `main` for Free Edition)
-3. Run all cells
+For detailed step-by-step instructions with screenshots and troubleshooting, see the complete setup guide above.
 
-### **Step 3: ⚠️ CRITICAL - Run Data Ingestion Pipeline** 🏗️
-**You MUST do this before any GenAI modules!**
+### **Quick Start Summary:**
 
-1. Open `lakehouse-iot-platform/01-Data-ingestion/01.1-SDP-Wind-Turbine-SQL.ipynb`
-2. Run all cells (creates turbine tables with sensor data)
-3. Verify: `SELECT * FROM turbine_status LIMIT 10` returns data ✅
+**Step 1:** Clone Repository to Databricks 📦
+- Workspace → Repos → Add Repo
+- URL: `https://github.com/PaulKuhz/e2e-data-science`
 
-**Why?** All GenAI tools query these tables. Without data → tools fail!
+**Step 2:** Configure Environment ⚙️
+- Open `lakehouse-iot-platform/config.ipynb`
+- Set catalog: `main` (Free Edition)
 
-### **Step 4: Start Your GenAI Journey** 🎓
-1. Open `lakehouse-iot-platform/05-Generative-AI/README.md`
-2. Choose your learning path
-3. Begin with `05.1.1-prompt-engineering-basics.ipynb`
+**Step 3:** ⚠️ **CRITICAL** - Run Data Pipeline 🏗️
+- Open `01-Data-ingestion/01.1-SDP-Wind-Turbine-SQL.ipynb`
+- Run all cells (~3-5 min)
+- **Without this, GenAI tools will fail!**
+
+**Step 4:** Verify Data ✅
+```sql
+SELECT * FROM main.e2eai_iot_turbine.turbine_status LIMIT 10
+```
+
+**Step 5:** Create UC Functions 🔧
+- Open `05-Generative-AI/05.1-ai-tools.ipynb`
+- Run all cells to create agent tools
+
+**Step 6:** Start Learning! 🎓
+- Open `05-Generative-AI/05.1.1-prompt-engineering-basics.ipynb`
+- Earn your first badge in 30 minutes!
 
 ---
 
