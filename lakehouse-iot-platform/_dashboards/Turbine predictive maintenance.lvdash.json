@@ -443,12 +443,12 @@
                       "expression": "DATE_TRUNC(\"HOUR\", `time`)"
                     },
                     {
-                      "name": "sum(max)",
-                      "expression": "SUM(`max`)"
-                    },
-                    {
                       "name": "sum(min)",
                       "expression": "SUM(`min`)"
+                    },
+                    {
+                      "name": "sum(max)",
+                      "expression": "SUM(`max`)"
                     },
                     {
                       "name": "sum(prediction)",
@@ -467,8 +467,7 @@
                   "fieldName": "hourly(time)",
                   "scale": {
                     "type": "temporal"
-                  },
-                  "displayName": "time"
+                  }
                 },
                 "y": {
                   "scale": {
@@ -476,39 +475,22 @@
                   },
                   "fields": [
                     {
-                      "fieldName": "sum(min)",
-                      "displayName": "Sum of min"
+                      "fieldName": "sum(min)"
                     },
                     {
-                      "fieldName": "sum(max)",
-                      "displayName": "Sum of max"
+                      "fieldName": "sum(max)"
                     },
                     {
-                      "fieldName": "sum(prediction)",
-                      "displayName": "Sum of prediction"
+                      "fieldName": "sum(prediction)"
                     }
                   ]
                 }
               },
               "frame": {
-                "title": "Energy production forecast",
-                "showTitle": true,
                 "description": "Based on the weather forecast.",
-                "showDescription": true
-              },
-              "mark": {
-                "colors": [
-                  "#278bbb",
-                  "#39cd58",
-                  "#e3a91f",
-                  "#FF3621",
-                  "#8BCAE7",
-                  "#AB4057",
-                  "#99DDB4",
-                  "#FCA4A1",
-                  "#919191",
-                  "#BF7080"
-                ]
+                "showDescription": true,
+                "title": "Energy production forecast",
+                "showTitle": true
               }
             }
           },
@@ -521,11 +503,22 @@
         }
       ],
       "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "42922769",
+      "displayName": "Untitled page",
+      "pageType": "PAGE_TYPE_CANVAS"
     }
   ],
   "uiSettings": {
     "theme": {
       "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
-    }
+    },
+    "genieSpace": {
+      "isEnabled": true,
+      "overrideId": "01f0ee4b818f1d5b831298638916d509",
+      "enablementMode": "ENABLED"
+    },
+    "applyModeEnabled": false
   }
 }
